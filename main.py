@@ -8,10 +8,6 @@ import xgboost
 from itertools import combinations_with_replacement
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import cross_val_score
-from pandasai.llm.openai import OpenAI
-from pandasai import PandasAI
-
-
 
 # Set page configuration
 st.set_page_config(

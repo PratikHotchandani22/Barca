@@ -16,7 +16,6 @@ st.set_page_config(
     layout="wide"
 )
 
-# Apply football-themed styling
 st.markdown(
     """
     <style>
@@ -37,7 +36,6 @@ st.markdown(
         background-color: #004080; /* Football blue */
         color: #ffffff;
     }
-
     /* Add more CSS styles here */
     
     </style>
@@ -791,20 +789,6 @@ if selected_analysis:
         for uniqueMatchID in selected_opponent_match_events['match_id'].unique():
             df_final = selected_opponent_match_events[selected_opponent_match_events['match_id'] == uniqueMatchID]
             passingProbabilityPlots(df_final)
-
-    '''
-    with col2:
-        st.info("Chat Below")
-            
-        input_text = st.text_area("Enter your query")
-
-        if input_text is not None:
-            if st.button("Chat with CSV"):
-                st.info("Your Query: "+input_text)
-                result = chat_with_csv(selected_opponent_match_events, input_text)
-                st.success(result)
-
-'''
  
 # Add your web app content here
 st.markdown("</div>", unsafe_allow_html=True)
